@@ -149,7 +149,7 @@ GEM
       rake (>= 13)
     googleapis-common-protos-types (1.22.0)
       google-protobuf (~> 4.26)
-    graphiti (1.10.1)
+    graphiti (1.10.2)
       activesupport (>= 5.2)
       concurrent-ruby (>= 1.2, < 2.0)
       dry-types (>= 0.15.0, < 2.0)
@@ -209,7 +209,8 @@ GEM
     method_source (1.1.0)
     mini_mime (1.1.5)
     mini_portile2 (2.8.9)
-    minitest (6.0.1)
+    minitest (6.0.2)
+      drb (~> 2.0)
       prism (~> 1.5)
     msgpack (1.8.0)
     mustache (1.1.1)
@@ -681,7 +682,7 @@ CHECKSUMS
   globalid (1.3.0) sha256=05c639ad6eb4594522a0b07983022f04aa7254626ab69445a0e493aa3786ff11
   google-protobuf (4.33.5) sha256=1b64fb774c101b23ac3f6923eca24be04fd971635d235c4cd4cfe0d752620da0
   googleapis-common-protos-types (1.22.0) sha256=f97492b77bd6da0018c860d5004f512fe7cd165554d7019a8f4df6a56fbfc4c7
-  graphiti (1.10.1) sha256=e993804bb69a9909fd7af3fa6d736ba93e252053c1f2ee920dafee18d2d1b3b7
+  graphiti (1.10.2) sha256=836333464c9d02b91ae5404ca35d2168e378ddc2d17f8bf832996ded21b8dc7b
   graphiti-rails (0.4.1) sha256=c6be084e4119bc061e51fdcb5536fcc29a02099b4404dd36adfc038264ddeab8
   graphiti_errors (1.1.2) sha256=98d3d7e87f3469647c5aa97adc5edf81eecebeb0402e69659137688d445b8dc3
   graphiti_spec_helpers (1.2.0) sha256=ef95d8d0f1bf48e6a767e1c29ec31930c87ffc7709bc72ca5c13ee107c33bce5
@@ -706,7 +707,7 @@ CHECKSUMS
   method_source (1.1.0) sha256=181301c9c45b731b4769bc81e8860e72f9161ad7d66dd99103c9ab84f560f5c5
   mini_mime (1.1.5) sha256=8681b7e2e4215f2a159f9400b5816d85e9d8c6c6b491e96a12797e798f8bccef
   mini_portile2 (2.8.9) sha256=0cd7c7f824e010c072e33f68bc02d85a00aeb6fce05bb4819c03dfd3c140c289
-  minitest (6.0.1) sha256=7854c74f48e2e975969062833adc4013f249a4b212f5e7b9d5c040bf838d54bb
+  minitest (6.0.2) sha256=db6e57956f6ecc6134683b4c87467d6dd792323c7f0eea7b93f66bd284adbc3d
   msgpack (1.8.0) sha256=e64ce0212000d016809f5048b48eb3a65ffb169db22238fb4b72472fecb2d732
   mustache (1.1.1) sha256=90891fdd50b53919ca334c8c1031eada1215e78d226d5795e523d6123a2717d0
   net-imap (0.6.3) sha256=9bab75f876596d09ee7bf911a291da478e0cd6badc54dfb82874855ccc82f2ad
