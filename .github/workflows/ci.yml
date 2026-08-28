@@ -66,7 +66,7 @@ jobs:
 
   build_and_push:
     name: Build docker image
-    if: (github.ref == 'refs/heads/main') || (github.event_name == 'release')
+    if: (github.repository_owner == 'Null-Signal-Games' &&  (github.ref == 'refs/heads/main' || github.event_name == 'release'))
 
     needs: [ci]
     runs-on: ubuntu-latest
