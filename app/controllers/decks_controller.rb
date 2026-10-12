@@ -53,8 +53,6 @@ class DecksController < ApplicationController
     deck_resource = DeckResource.find(params)
 
     ActiveRecord::Base.transaction do
-      DeckCard.where(deck_id: deck_resource.data.id).delete_all
-
       deck = Deck.find(deck_resource.data.id)
 
       deck.identity_card_id = attributes.key?(:identity_card_id) ? attributes[:identity_card_id] : deck.identity_card_id
@@ -69,8 +67,11 @@ class DecksController < ApplicationController
       deck.tags = attributes.key?(:tags) ? attributes[:tags] : deck.tags
       deck.updated_at = Time.now.utc.to_fs(:iso8601)
 
-      card_slots.each do |card_id, quantity|
-        deck.card_slots.create!(card_id:, quantity:)
+      unless card_slots.nil?
+        DeckCard.where(deck_id: deck.id).delete_all
+        card_slots.each do |card_id, quantity|
+          deck.deck_cards.create!(card_id:, quantity:)
+        end
       end
 
       deck.save!
