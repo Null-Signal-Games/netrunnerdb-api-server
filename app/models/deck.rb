@@ -19,7 +19,7 @@ class Deck < ApplicationRecord
   }
   has_one :faction, through: :identity_card
 
-  has_many :deck_cards
+  has_many :deck_cards, dependent: :delete_all
   has_many :cards, through: :deck_cards
 
   def card_slots

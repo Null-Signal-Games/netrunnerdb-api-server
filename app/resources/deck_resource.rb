@@ -58,4 +58,8 @@ class DeckResource < PrivateApplicationResource
   end
 
   many_to_many :cards
+
+  def base_scope
+    Deck.where(user_id: context.current_user.id)
+  end
 end
