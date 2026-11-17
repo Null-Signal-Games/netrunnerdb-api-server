@@ -94,6 +94,7 @@ RSpec.configure do |config|
 end
 
 require 'rspec_api_documentation/dsl'
+require_relative 'support/rspec_api_documentation_patches'
 
 RspecApiDocumentation.configure do |config|
   config.format = :json

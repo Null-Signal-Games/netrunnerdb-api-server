@@ -3,7 +3,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '~> 3.4.4'
+ruby '~> 3.4'
 
 # Gems that have trouble with native packages on alpine.
 gem 'google-protobuf', force_ruby_platform: true
@@ -44,8 +44,9 @@ gem 'scenic'
 
 gem 'apitome'
 gem 'jwt'
-# Specific fork to deal with rack 3.1 compatibility issue.
-gem 'rspec_api_documentation', github: 'SchoolKeep/rspec_api_documentation', ref: '13df1ac'
+# Upstream is unmaintained; Rack 3.1 / Ruby 3.2+ fixes live in
+# spec/support/rspec_api_documentation_patches.rb.
+gem 'rspec_api_documentation', '6.1.0'
 gem 'sprockets-rails'
 
 # Observability and monitoring via OpenTelemetry.
